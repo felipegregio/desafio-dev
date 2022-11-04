@@ -21,3 +21,24 @@ A aplicação realiza a conexão com a base de dados em MySQL, e a query para cr
 A aplicação também retorna se os dados foram inseridos na base dedados, o total de registros encontrados na base de dados, o saldo total (aparece com fundo vermelho se for saldo negativo, e com fundo verde se for saldo positivo);
 O CSS foi feito sem ajuda de framework;
 
+
+QUERY PARA CRIAÇÃO DA BASE DE DADOS NO MYSQL (através do phpmyadmin)
+
+CREATE TABLE `cnab` (
+  `Tipo` int(1) NOT NULL,
+  `Data` varchar(8) NOT NULL,
+  `Valor` float NOT NULL,
+  `CPF` varchar(11) NOT NULL,
+  `Cartao` varchar(12) NOT NULL,
+  `Hora` varchar(10) NOT NULL,
+  `Dono_loja` varchar(14) NOT NULL,
+  `Nome_loja` varchar(19) NOT NULL
+)
+COMMIT;
+
+
+
+Para fazer a criação da base de dados, basta acessar a url http://localhost/phpmyadmin/index.php, após ter realizado a subida do projeto no XAMPP/WAMPP.
+
+Ao acessar o phpmyadmin, basta clicar em novo no menu a esquerda, e criar uma base de dados chamada: 'test'.
+E na aba "SQL", basta colar a query acima.
